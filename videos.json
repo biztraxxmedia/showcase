@@ -70,6 +70,18 @@
               "poster": "posters/dog-gone-classy/animated-commercial-9x16.jpg"
             }
           }
+        },
+        {
+          "id": "wild-history-of-dog-grooming",
+          "title": "The Wild History of Dog Grooming",
+          "description": "A short documentary on the wild history of dog grooming.",
+          "duration": 161,
+          "formats": {
+            "widescreen": {
+              "src": "videos/dog-gone-classy/wild-history-of-dog-grooming-v3.mp4",
+              "poster": "posters/dog-gone-classy/wild-history-of-dog-grooming-16x9.jpg"
+            }
+          }
         }
       ]
     },
