@@ -34,11 +34,11 @@
           "duration": 22,
           "formats": {
             "widescreen": {
-              "src": "videos/dog-gone-classy/graffiti-menu-audio-16x9.mp4",
+              "src": "videos/dog-gone-classy/graffiti-menu-v3-16x9.mp4",
               "poster": "posters/dog-gone-classy/graffiti-menu-16x9.jpg"
             },
             "vertical": {
-              "src": "videos/dog-gone-classy/graffiti-menu-audio-9x16.mp4",
+              "src": "videos/dog-gone-classy/graffiti-menu-v3-9x16.mp4",
               "poster": "posters/dog-gone-classy/graffiti-menu-9x16.jpg"
             }
           }
