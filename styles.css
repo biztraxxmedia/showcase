@@ -38,7 +38,7 @@ header.site { display: flex; align-items: baseline; justify-content: space-betwe
 .client-card p { color: var(--muted); margin-top: .25rem; font-size: .95rem; }
 
 .page-head { text-align: center; margin: .5rem 0 1.75rem; }
-.page-head .logo { width: min(220px, 55vw); height: auto; display: block; margin: 0 auto .85rem; }
+.page-head .logo { width: min(220px, 55vw); height: auto; display: block; margin: 0 auto .85rem; object-fit: contain; }
 .page-head h1 { font-size: clamp(1.3rem, 4.5vw, 2rem); line-height: 1.1; }
 .page-head p { color: var(--muted); margin-top: .4rem; }
 
@@ -58,6 +58,7 @@ body.dgc .video-card h2 { font-family: "Bungee", "Outfit", sans-serif; }
 body.dgc .page-head h1 { font-size: clamp(1.3rem, 4.5vw, 2rem); }
 body.dgc .video-card h2 { font-size: clamp(.95rem, 3.4vw, 1.15rem); }
 body.dgc .toggle button[aria-pressed="true"] { background: var(--ink); color: var(--lime); }
+body.dgc .page-head .logo { width: min(240px, 58vw); padding: 10px 8px 6px; box-sizing: content-box; object-fit: contain; object-position: center top; }
 
 /* TMR — lean, their navy / electric blue / lime */
 body.tmr {

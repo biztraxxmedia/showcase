@@ -12,6 +12,54 @@
       "theme": "dgc",
       "videos": [
         {
+          "id": "walk-in-a-mess",
+          "title": "Walk In A Mess, Strut Out Classy",
+          "description": "A glow-up that ends at the photo set with camera flashes.",
+          "duration": 25,
+          "formats": {
+            "widescreen": {
+              "src": "videos/dog-gone-classy/walk-in-a-mess-16x9.mp4",
+              "poster": "posters/dog-gone-classy/walk-in-a-mess-16x9.jpg"
+            },
+            "vertical": {
+              "src": "videos/dog-gone-classy/walk-in-a-mess-9x16.mp4",
+              "poster": "posters/dog-gone-classy/walk-in-a-mess-9x16.jpg"
+            }
+          }
+        },
+        {
+          "id": "graffiti-menu",
+          "title": "Graffiti Menu",
+          "description": "The brick wall comes alive and spray-paints each service next to a clip.",
+          "duration": 25,
+          "formats": {
+            "widescreen": {
+              "src": "videos/dog-gone-classy/graffiti-menu-16x9.mp4",
+              "poster": "posters/dog-gone-classy/graffiti-menu-16x9.jpg"
+            },
+            "vertical": {
+              "src": "videos/dog-gone-classy/graffiti-menu-9x16.mp4",
+              "poster": "posters/dog-gone-classy/graffiti-menu-9x16.jpg"
+            }
+          }
+        },
+        {
+          "id": "dgc-news-breaking",
+          "title": "DGC News: Breaking",
+          "description": "A fake news broadcast from a scruffy pup on the loose to dangerously classy.",
+          "duration": 25,
+          "formats": {
+            "widescreen": {
+              "src": "videos/dog-gone-classy/dgc-news-breaking-16x9.mp4",
+              "poster": "posters/dog-gone-classy/dgc-news-breaking-16x9.jpg"
+            },
+            "vertical": {
+              "src": "videos/dog-gone-classy/dgc-news-breaking-9x16.mp4",
+              "poster": "posters/dog-gone-classy/dgc-news-breaking-9x16.jpg"
+            }
+          }
+        },
+        {
           "id": "animated-commercial",
           "title": "Animated Logo Spot",
           "description": "A 20-second animated logo commercial.",
