@@ -93,6 +93,243 @@
           }
         }
       ]
+    },
+    {
+      "id": "inner-wisdom",
+      "name": "Inner Wisdom",
+      "slug": "inner-wisdom",
+      "logo": "assets/inner-wisdom/logo.png",
+      "theme": "iw",
+      "videos": [
+        {
+          "id": "teaser",
+          "title": "Teaser",
+          "description": "A short teaser cut of the Inner Wisdom loop pack.",
+          "duration": 54,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/teaser.mp4",
+              "poster": "posters/inner-wisdom/teaser.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-01-twin-mech-rex",
+          "title": "Twin Mech Rex",
+          "description": "Two armored mech T-rexes roar in a reactor glow, with the logo at the center.",
+          "duration": 13,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-01-twin-mech-rex.mp4",
+              "poster": "posters/inner-wisdom/loop-01-twin-mech-rex.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-02-twin-mech-rex-frames",
+          "title": "Twin Mech Rex (Frames)",
+          "description": "The tighter Twin Mech Rex loop, both rexes roaring toward the bottom right with a logo gap.",
+          "duration": 8,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-02-twin-mech-rex-frames.mp4",
+              "poster": "posters/inner-wisdom/loop-02-twin-mech-rex-frames.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-03-cyclotron-oracle",
+          "title": "Cyclotron Oracle",
+          "description": "A monolithic robot head with a spinning reactor iris and pulsing teal-and-amber seams.",
+          "duration": 7,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-03-cyclotron-oracle.mp4",
+              "poster": "posters/inner-wisdom/loop-03-cyclotron-oracle.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-04-sovereign-circuit",
+          "title": "Sovereign Circuit",
+          "description": "A mechanical lion under counter-rotating sacred-geometry halos.",
+          "duration": 7,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-04-sovereign-circuit.mp4",
+              "poster": "posters/inner-wisdom/loop-04-sovereign-circuit.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-05-chromium-pressure",
+          "title": "Chromium Pressure",
+          "description": "A chrome skull in a liquid bass-pressure field, ringed by orbiting mirror shards.",
+          "duration": 7,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-05-chromium-pressure.mp4",
+              "poster": "posters/inner-wisdom/loop-05-chromium-pressure.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-06-sludge-transmission",
+          "title": "Sludge Transmission",
+          "description": "A thick-ink slime cyclops with an elastic jaw and orbiting toxic droplets.",
+          "duration": 7,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-06-sludge-transmission.mp4",
+              "poster": "posters/inner-wisdom/loop-06-sludge-transmission.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-07-abyssal-machine",
+          "title": "Abyssal Machine",
+          "description": "A mechanized octopus whose bronze tentacles and cyan suction nodes move in phase.",
+          "duration": 7,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-07-abyssal-machine.mp4",
+              "poster": "posters/inner-wisdom/loop-07-abyssal-machine.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-08-pyramid-parasite",
+          "title": "Pyramid Parasite",
+          "description": "A one-eyed angular creature inside a recursive prism portal.",
+          "duration": 11,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-08-pyramid-parasite.mp4",
+              "poster": "posters/inner-wisdom/loop-08-pyramid-parasite.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-09-siege-walker",
+          "title": "Siege Walker",
+          "description": "A heavy armored walker stomping in place on a fractured industrial deck.",
+          "duration": 5,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-09-siege-walker.mp4",
+              "poster": "posters/inner-wisdom/loop-09-siege-walker.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-10-furnace-revenant",
+          "title": "Furnace Revenant",
+          "description": "A molten robot skull with an ember vortex and furnace-bright armor seams.",
+          "duration": 5,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-10-furnace-revenant.mp4",
+              "poster": "posters/inner-wisdom/loop-10-furnace-revenant.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-11-blackwater-hydra",
+          "title": "Blackwater Hydra",
+          "description": "Three bio-mech eel heads rise from dark water, trailing ghosted echoes.",
+          "duration": 13,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-11-blackwater-hydra.mp4",
+              "poster": "posters/inner-wisdom/loop-11-blackwater-hydra.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-12-purple-slime-cyclops",
+          "title": "Purple Slime Cyclops",
+          "description": "A wonky one-eyed cyclops made of dripping toxic purple sludge.",
+          "duration": 8,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-12-purple-slime-cyclops.mp4",
+              "poster": "posters/inner-wisdom/loop-12-purple-slime-cyclops.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-13-electric-slime-cyclops",
+          "title": "Electric Slime Cyclops",
+          "description": "The slime cyclops in electric-blue sludge, crackling with lightning.",
+          "duration": 16,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-13-electric-slime-cyclops.mp4",
+              "poster": "posters/inner-wisdom/loop-13-electric-slime-cyclops.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-14-wonky-alchemy-lab",
+          "title": "Wonky Alchemy Lab",
+          "description": "A warped mad-scientist lab of bubbling flasks, coils, and toxic potions.",
+          "duration": 7,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-14-wonky-alchemy-lab.mp4",
+              "poster": "posters/inner-wisdom/loop-14-wonky-alchemy-lab.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-15-witch-doctor-fire",
+          "title": "Witch Doctor Fire",
+          "description": "A masked witch doctor dances around a roaring bonfire in psychedelic smoke.",
+          "duration": 8,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-15-witch-doctor-fire.mp4",
+              "poster": "posters/inner-wisdom/loop-15-witch-doctor-fire.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-16-speaker-stack-monster",
+          "title": "Speaker Stack Monster",
+          "description": "A hulking bass-cabinet monster with a snarling speaker-cone mouth.",
+          "duration": 8,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-16-speaker-stack-monster.mp4",
+              "poster": "posters/inner-wisdom/loop-16-speaker-stack-monster.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-17-mutant-mushroom",
+          "title": "Mutant Mushroom",
+          "description": "A grotesque mutant mushroom cluster with wobbling eyes and spore clouds.",
+          "duration": 8,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-17-mutant-mushroom.mp4",
+              "poster": "posters/inner-wisdom/loop-17-mutant-mushroom.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-18-cyber-demon-mask",
+          "title": "Cyber Demon Mask",
+          "description": "A horned demon mask, half flesh and half chrome, with glowing red eyes.",
+          "duration": 7,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-18-cyber-demon-mask.mp4",
+              "poster": "posters/inner-wisdom/loop-18-cyber-demon-mask.jpg"
+            }
+          }
+        }
+      ]
     }
   ]
 }

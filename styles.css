@@ -93,3 +93,29 @@ body.tmr .toggle button[aria-pressed="true"] { background: var(--ink); color: va
 .player.widescreen video { aspect-ratio: 16/9; object-fit: contain; }
 .player.vertical { display: flex; justify-content: center; background: transparent; }
 .player.vertical video { width: min(100%, 360px); aspect-ratio: 9/16; border-radius: 8px; }
+
+/* Inner Wisdom — dark, white logo, Crimson Lab accents */
+body.iw {
+  --bg: #050003;
+  --ink: #f4eaea;
+  --muted: #c9a8a8;
+  --line: rgba(255, 190, 190, 0.28);
+  --card: #120408;
+  --accent: #ff2b3a;
+  background: var(--bg);
+  color: var(--ink);
+}
+body.iw .page-head h1,
+body.iw .video-card h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+body.iw .page-head .logo {
+  width: min(280px, 70vw);
+  filter: drop-shadow(0 0 18px rgba(255, 43, 58, 0.28));
+}
+body.iw .back { color: var(--muted); }
+body.iw .client-card,
+body.iw .video-card { background: var(--card); }
+body.iw .toggle { background: #1a080c; border-color: var(--line); }
+body.iw .toggle button { color: var(--ink); }
+body.iw .toggle button[aria-pressed="true"] { background: var(--accent); color: #fff0ee; }
