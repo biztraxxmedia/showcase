@@ -98,7 +98,7 @@
     });
   }
 
-  fetch(asset("videos.json"))
+  fetch(asset("videos.json") + "?v=" + Date.now(), {cache: "no-store"})
     .then(function (r) { return r.json(); })
     .then(function (data) {
       if (only) {
