@@ -1,0 +1,98 @@
+{
+  "site": {
+    "title": "Showcase",
+    "tagline": "Short commercials, ready to watch."
+  },
+  "clients": [
+    {
+      "id": "dog-gone-classy",
+      "name": "Dog Gone Classy",
+      "slug": "dog-gone-classy",
+      "logo": "assets/dog-gone-classy/logo.png",
+      "theme": "dgc",
+      "videos": [
+        {
+          "id": "walk-in-a-mess",
+          "title": "Walk In A Mess, Strut Out Classy",
+          "description": "A glow-up that ends at the photo set with camera flashes.",
+          "duration": 25,
+          "formats": {
+            "widescreen": {
+              "src": "videos/dog-gone-classy/walk-in-a-mess-16x9.mp4",
+              "poster": "posters/dog-gone-classy/walk-in-a-mess-16x9.jpg"
+            },
+            "vertical": {
+              "src": "videos/dog-gone-classy/walk-in-a-mess-9x16.mp4",
+              "poster": "posters/dog-gone-classy/walk-in-a-mess-9x16.jpg"
+            }
+          }
+        },
+        {
+          "id": "graffiti-menu",
+          "title": "Graffiti Menu",
+          "description": "The brick wall comes alive and spray-paints each service next to a clip.",
+          "duration": 25,
+          "formats": {
+            "widescreen": {
+              "src": "videos/dog-gone-classy/graffiti-menu-16x9.mp4",
+              "poster": "posters/dog-gone-classy/graffiti-menu-16x9.jpg"
+            },
+            "vertical": {
+              "src": "videos/dog-gone-classy/graffiti-menu-9x16.mp4",
+              "poster": "posters/dog-gone-classy/graffiti-menu-9x16.jpg"
+            }
+          }
+        },
+        {
+          "id": "dgc-news-breaking",
+          "title": "DGC News: Breaking",
+          "description": "A fake news broadcast from a scruffy pup on the loose to dangerously classy.",
+          "duration": 25,
+          "formats": {
+            "widescreen": {
+              "src": "videos/dog-gone-classy/dgc-news-breaking-16x9.mp4",
+              "poster": "posters/dog-gone-classy/dgc-news-breaking-16x9.jpg"
+            },
+            "vertical": {
+              "src": "videos/dog-gone-classy/dgc-news-breaking-9x16.mp4",
+              "poster": "posters/dog-gone-classy/dgc-news-breaking-9x16.jpg"
+            }
+          }
+        },
+        {
+          "id": "animated-commercial",
+          "title": "Animated Logo Spot",
+          "description": "A 20-second animated logo commercial.",
+          "duration": 20,
+          "formats": {
+            "vertical": {
+              "src": "videos/dog-gone-classy/animated-commercial-9x16.mp4",
+              "poster": "posters/dog-gone-classy/animated-commercial-9x16.jpg"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "thriller-miller-racing-46",
+      "name": "Thriller Miller Racing 46",
+      "slug": "thriller-miller-racing-46",
+      "logo": "assets/thriller-miller-racing-46/logo.png",
+      "theme": "tmr",
+      "videos": [
+        {
+          "id": "photo-commercial",
+          "title": "Photo Commercial",
+          "description": "A 22-second racing spot built from real photos.",
+          "duration": 22,
+          "formats": {
+            "widescreen": {
+              "src": "videos/thriller-miller-racing-46/photo-commercial-16x9.mp4",
+              "poster": "posters/thriller-miller-racing-46/photo-commercial-16x9.jpg"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
