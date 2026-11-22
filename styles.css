@@ -95,16 +95,21 @@ body.tmr .toggle button[aria-pressed="true"] { background: var(--ink); color: va
 .player.vertical { display: flex; justify-content: center; background: transparent; }
 .player.vertical video { width: min(100%, 360px); aspect-ratio: 9/16; border-radius: 8px; }
 
-/* Inner Wisdom — dark, white logo, Crimson Lab accents */
+/* Inner Wisdom — deep black, electric blue, acid green */
 body.iw {
-  --bg: #050003;
-  --ink: #f4eaea;
-  --muted: #c9a8a8;
-  --line: rgba(255, 190, 190, 0.28);
-  --card: #120408;
-  --accent: #ff2b3a;
+  --bg: #02040a;
+  --ink: #e8f4ff;
+  --muted: #8fb0d8;
+  --line: rgba(90, 160, 255, 0.35);
+  --card: #070b16;
+  --accent: #2a62ff;
+  --lime: #c6ff2e;
   background: var(--bg);
   color: var(--ink);
+  padding: 38px 28px 44px;
+}
+@media (max-width: 640px) {
+  body.iw { padding: 26px 14px 32px; }
 }
 body.iw .page-head h1,
 body.iw .video-card h2 {
@@ -112,14 +117,14 @@ body.iw .video-card h2 {
 }
 body.iw .page-head .logo {
   width: min(280px, 70vw);
-  filter: drop-shadow(0 0 18px rgba(255, 43, 58, 0.28));
+  filter: drop-shadow(0 0 16px rgba(42, 98, 255, 0.5)) drop-shadow(0 0 28px rgba(198, 255, 46, 0.18));
 }
 body.iw .back { color: var(--muted); }
 body.iw .client-card,
 body.iw .video-card { background: var(--card); }
-body.iw .toggle { background: #1a080c; border-color: var(--line); }
+body.iw .toggle { background: #0a1220; border-color: var(--line); }
 body.iw .toggle button { color: var(--ink); }
-body.iw .toggle button[aria-pressed="true"] { background: var(--accent); color: #fff0ee; }
+body.iw .toggle button[aria-pressed="true"] { background: var(--accent); color: var(--lime); }
 
 /* QR codes — light card grid, DGC and reusable */
 .qr-section { margin: 2rem 0 0; }
@@ -159,11 +164,12 @@ body.dgc .qr-section h2 { font-family: "Bungee", "Outfit", sans-serif; font-size
 body.iw .featured-section .section-title {
   font-family: Georgia, "Times New Roman", serif;
   letter-spacing: .16em;
-  color: #e8b4b4;
+  color: var(--lime);
 }
 body.iw .video-card.featured {
-  border-color: rgba(255, 190, 190, 0.42);
-  box-shadow: 0 0 28px rgba(255, 43, 58, 0.12);
+  border-color: rgba(42, 98, 255, 0.45);
+  box-shadow: 0 0 28px rgba(42, 98, 255, 0.14);
+  padding: .45rem;
 }
 
 /* Inner Wisdom artwork — tap to enlarge on the page */
@@ -173,7 +179,7 @@ body.iw .iw-art .section-title {
   letter-spacing: .16em;
   text-transform: uppercase;
   font-size: 1.05rem;
-  color: #e8b4b4;
+  color: var(--lime);
   margin: 0 0 1rem;
 }
 body.iw .iw-art figure { margin: 0 auto; width: min(760px, 100%); }
@@ -189,7 +195,7 @@ body.iw .iw-art-thumb {
   cursor: zoom-in;
 }
 body.iw .iw-art-thumb img { display: block; width: 100%; height: auto; }
-body.iw .iw-art-thumb:hover { border-color: rgba(255, 190, 190, 0.7); }
+body.iw .iw-art-thumb:hover { border-color: var(--lime); }
 body.iw .iw-art figcaption { color: var(--muted); margin-top: .65rem; font-size: .95rem; }
 .iw-lightbox {
   position: fixed;
@@ -228,3 +234,37 @@ body.iw .featured-section .section-title,
 body.iw .video-card.featured h2,
 body.iw .video-card.featured .desc,
 body.iw .video-card.featured .meta { display: none; }
+
+/* IW: hide every video description; featured stay wordless */
+body.iw .video-card .desc { display: none; }
+
+/* Wizard-robe frame: royal blue with gold moons and stars (inline SVG, no image file) */
+body.iw::before {
+  content: "";
+  position: fixed;
+  inset: 8px;
+  z-index: 40;
+  pointer-events: none;
+  border: 20px solid transparent;
+  border-image-source: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20fill%3D%22%231e36c4%22%2F%3E%3Cpath%20fill%3D%22%23f4d056%22%20d%3D%22M14.47%2C6.24%20A7.20%207.20%200%201%201%209.53%2C19.76%20A5.62%205.62%200%201%200%2014.47%2C6.24Z%22%2F%3E%3Cpath%20fill%3D%22%23f4d056%22%20d%3D%22M33.75%2C39.99%20A6.40%206.40%200%201%201%2038.25%2C28.01%20A4.99%204.99%200%201%200%2033.75%2C39.99Z%22%2F%3E%3Cpolygon%20points%3D%2234.69%2C6.45%2035.45%2C9.53%2038.54%2C10.25%2035.85%2C11.93%2036.12%2C15.08%2033.69%2C13.05%2030.77%2C14.28%2031.96%2C11.34%2029.89%2C8.94%2033.05%2C9.16%22%20fill%3D%22%23f4d056%22%2F%3E%3Cpolygon%20points%3D%2214.56%2C31.32%2014.54%2C34.07%2016.99%2C35.34%2014.36%2C36.18%2013.91%2C38.90%2012.30%2C36.66%209.57%2C37.07%2011.21%2C34.85%209.98%2C32.38%2012.59%2C33.25%22%20fill%3D%22%23f4d056%22%2F%3E%3Cpolygon%20points%3D%2223.36%2C20.86%2024.60%2C22.69%2026.79%2C22.43%2025.43%2C24.16%2026.36%2C26.16%2024.29%2C25.41%2022.67%2C26.91%2022.75%2C24.71%2020.82%2C23.64%2022.94%2C23.03%22%20fill%3D%22%23f4d056%22%2F%3E%3C%2Fsvg%3E");
+  border-image-slice: 20;
+  border-image-repeat: repeat;
+  box-shadow: 0 0 0 1px rgba(244, 208, 86, 0.45);
+}
+body.iw::after {
+  content: "";
+  position: fixed;
+  inset: 28px;
+  z-index: 40;
+  pointer-events: none;
+  border: 1px solid rgba(244, 208, 86, 0.85);
+}
+@media (max-width: 640px) {
+  body.iw::before { inset: 5px; border-width: 13px; border-image-slice: 13; }
+  body.iw::after { inset: 18px; }
+}
+body.iw .player,
+body.iw .iw-art-thumb {
+  border: 2px solid #1e36c4;
+  box-shadow: 0 0 0 1px rgba(244, 208, 86, 0.55);
+}
