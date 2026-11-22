@@ -114,6 +114,32 @@
       "theme": "iw",
       "videos": [
         {
+          "id": "featured-twin-wizards",
+          "title": "Twin Wizards",
+          "description": "Two mirrored wizards hold a hand triangle around the Inner Wisdom logo.",
+          "duration": 15,
+          "featured": true,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/featured-twin-wizards.mp4",
+              "poster": "posters/inner-wisdom/featured-twin-wizards.jpg"
+            }
+          }
+        },
+        {
+          "id": "featured-purple-dolls",
+          "title": "Purple Dolls",
+          "description": "Mirrored purple-haired dolls in a junkyard haze, with the logo at the center.",
+          "duration": 30,
+          "featured": true,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/featured-purple-dolls.mp4",
+              "poster": "posters/inner-wisdom/featured-purple-dolls.jpg"
+            }
+          }
+        },
+        {
           "id": "teaser",
           "title": "Teaser",
           "description": "A short teaser cut of the Inner Wisdom loop pack.",

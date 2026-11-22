@@ -141,3 +141,84 @@ body.iw .toggle button[aria-pressed="true"] { background: var(--accent); color: 
 .qr-card h3 { font-size: 1rem; margin-top: .65rem; line-height: 1.2; }
 .qr-card p { color: var(--muted); font-size: .9rem; margin-top: .15rem; }
 body.dgc .qr-section h2 { font-family: "Bungee", "Outfit", sans-serif; font-size: clamp(.95rem, 3.4vw, 1.15rem); }
+
+/* Featured videos — larger, centered block (Inner Wisdom first) */
+.featured-section { margin: 0 auto 2rem; }
+.featured-section .section-title {
+  text-align: center;
+  font-size: 1.05rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+.video-card.featured { padding: 1.25rem 1.25rem 1.4rem; }
+.video-card.featured h2 { font-size: clamp(1.25rem, 3.6vw, 1.7rem); text-align: center; }
+.video-card.featured .desc { text-align: center; }
+.video-card.featured .meta { justify-content: center; }
+body.iw .featured-section .section-title {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: .16em;
+  color: #e8b4b4;
+}
+body.iw .video-card.featured {
+  border-color: rgba(255, 190, 190, 0.42);
+  box-shadow: 0 0 28px rgba(255, 43, 58, 0.12);
+}
+
+/* Inner Wisdom artwork — tap to enlarge on the page */
+body.iw .iw-art { margin: 2.75rem 0 0; text-align: center; }
+body.iw .iw-art .section-title {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  color: #e8b4b4;
+  margin: 0 0 1rem;
+}
+body.iw .iw-art figure { margin: 0 auto; width: min(760px, 100%); }
+body.iw .iw-art-thumb {
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  cursor: zoom-in;
+}
+body.iw .iw-art-thumb img { display: block; width: 100%; height: auto; }
+body.iw .iw-art-thumb:hover { border-color: rgba(255, 190, 190, 0.7); }
+body.iw .iw-art figcaption { color: var(--muted); margin-top: .65rem; font-size: .95rem; }
+.iw-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1rem 1.5rem;
+}
+.iw-lightbox[hidden] { display: none; }
+.iw-lightbox img {
+  max-width: min(1400px, 96vw);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+}
+.iw-lightbox-close {
+  appearance: none;
+  position: absolute;
+  top: .6rem;
+  right: .85rem;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: .2rem .45rem;
+}

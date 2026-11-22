@@ -79,7 +79,25 @@
 
   function renderClientPage(client) {
     const mount = document.getElementById("videos");
-    client.videos.forEach(function (v) { mount.append(renderVideo(v)); });
+    const videos = client.videos || [];
+    const featured = videos.filter(function (v) { return v.featured; });
+    const rest = videos.filter(function (v) { return !v.featured; });
+    if (featured.length) {
+      const sec = document.createElement("section");
+      sec.className = "featured-section";
+      sec.setAttribute("aria-label", "Featured");
+      const h = document.createElement("h2");
+      h.className = "section-title";
+      h.textContent = "Featured";
+      sec.append(h);
+      featured.forEach(function (v) {
+        const card = renderVideo(v);
+        card.classList.add("featured");
+        sec.append(card);
+      });
+      mount.append(sec);
+    }
+    rest.forEach(function (v) { mount.append(renderVideo(v)); });
   }
 
   function renderIndex(data) {

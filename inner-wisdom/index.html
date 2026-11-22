@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Inner Wisdom</title>
-  <link rel="stylesheet" href="../styles.css?v=2">
+  <link rel="stylesheet" href="../styles.css?v=4">
 </head>
 <body class="iw" data-base="../" data-client="inner-wisdom">
   <div class="wrap">
@@ -12,10 +12,49 @@
     <header class="page-head">
       <img class="logo" src="../assets/inner-wisdom/logo.png" alt="Inner Wisdom">
       <h1>Inner Wisdom</h1>
-      <p>18 visual loops plus a teaser, for DJ Rhavin.</p>
+      <p>Featured clips, 18 visual loops plus a teaser, for DJ Rhavin.</p>
     </header>
     <main id="videos"></main>
+    <section class="iw-art" aria-label="Artwork">
+      <h2 class="section-title">Artwork</h2>
+      <figure>
+        <button type="button" class="iw-art-thumb" id="iw-art-open" aria-label="Open Twin Wizards image">
+          <img src="../assets/inner-wisdom/iw-twin-wizards-logo.jpg" alt="Twin Wizards, with the Inner Wisdom logo between them">
+        </button>
+        <figcaption>Twin Wizards</figcaption>
+      </figure>
+    </section>
   </div>
-  <script src="../app.js?v=2"></script>
+  <div class="iw-lightbox" id="iw-lightbox" hidden>
+    <button type="button" class="iw-lightbox-close" id="iw-lightbox-close" aria-label="Close">×</button>
+    <img src="../assets/inner-wisdom/iw-twin-wizards-logo.jpg" alt="Twin Wizards, with the Inner Wisdom logo between them">
+  </div>
+  <script src="../app.js?v=4"></script>
+  <script>
+    (function () {
+      const openBtn = document.getElementById("iw-art-open");
+      const box = document.getElementById("iw-lightbox");
+      const closeBtn = document.getElementById("iw-lightbox-close");
+      if (!openBtn || !box) return;
+      function open() {
+        box.hidden = false;
+        document.body.style.overflow = "hidden";
+        closeBtn && closeBtn.focus();
+      }
+      function close() {
+        box.hidden = true;
+        document.body.style.overflow = "";
+        openBtn.focus();
+      }
+      openBtn.addEventListener("click", open);
+      closeBtn && closeBtn.addEventListener("click", close);
+      box.addEventListener("click", function (e) {
+        if (e.target === box) close();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !box.hidden) close();
+      });
+    })();
+  </script>
 </body>
 </html>
