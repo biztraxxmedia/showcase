@@ -117,7 +117,7 @@
           "id": "teaser",
           "title": "Teaser",
           "description": "A short teaser cut of the Inner Wisdom loop pack.",
-          "duration": 47,
+          "duration": 48,
           "formats": {
             "widescreen": {
               "src": "videos/inner-wisdom/teaser.mp4",
