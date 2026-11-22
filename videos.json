@@ -114,6 +114,19 @@
       "theme": "iw",
       "videos": [
         {
+          "id": "teaser",
+          "title": "Teaser",
+          "description": "A short teaser cut of the Inner Wisdom loop pack.",
+          "duration": 47,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/teaser.mp4",
+              "poster": "posters/inner-wisdom/teaser.jpg"
+            }
+          },
+          "featured": true
+        },
+        {
           "id": "featured-twin-wizards",
           "title": "Twin Wizards",
           "description": "Two mirrored wizards hold a hand triangle around the Inner Wisdom logo.",
@@ -140,14 +153,27 @@
           }
         },
         {
-          "id": "teaser",
-          "title": "Teaser",
-          "description": "A short teaser cut of the Inner Wisdom loop pack.",
-          "duration": 54,
+          "id": "featured-unicorn-rexes",
+          "title": "Unicorn Rexes",
+          "description": "Two mirrored blue unicorn T-rexes with the logo at the center.",
+          "duration": 15,
+          "featured": true,
           "formats": {
             "widescreen": {
-              "src": "videos/inner-wisdom/teaser.mp4",
-              "poster": "posters/inner-wisdom/teaser.jpg"
+              "src": "videos/inner-wisdom/featured-unicorn-rexes.mp4",
+              "poster": "posters/inner-wisdom/featured-unicorn-rexes.jpg"
+            }
+          }
+        },
+        {
+          "id": "loop-crimson-lab",
+          "title": "Crimson Lab",
+          "description": "A rotating red alchemy table on a black starfield, with the logo hovering at the center.",
+          "duration": 10,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/loop-crimson-lab.mp4",
+              "poster": "posters/inner-wisdom/loop-crimson-lab.jpg"
             }
           }
         },
@@ -308,18 +334,6 @@
           }
         },
         {
-          "id": "loop-14-wonky-alchemy-lab",
-          "title": "Wonky Alchemy Lab",
-          "description": "A warped mad-scientist lab of bubbling flasks, coils, and toxic potions.",
-          "duration": 7,
-          "formats": {
-            "widescreen": {
-              "src": "videos/inner-wisdom/loop-14-wonky-alchemy-lab.mp4",
-              "poster": "posters/inner-wisdom/loop-14-wonky-alchemy-lab.jpg"
-            }
-          }
-        },
-        {
           "id": "loop-15-witch-doctor-fire",
           "title": "Witch Doctor Fire",
           "description": "A masked witch doctor dances around a roaring bonfire in psychedelic smoke.",
@@ -328,18 +342,6 @@
             "widescreen": {
               "src": "videos/inner-wisdom/loop-15-witch-doctor-fire.mp4",
               "poster": "posters/inner-wisdom/loop-15-witch-doctor-fire.jpg"
-            }
-          }
-        },
-        {
-          "id": "loop-16-speaker-stack-monster",
-          "title": "Speaker Stack Monster",
-          "description": "A hulking bass-cabinet monster with a snarling speaker-cone mouth.",
-          "duration": 8,
-          "formats": {
-            "widescreen": {
-              "src": "videos/inner-wisdom/loop-16-speaker-stack-monster.mp4",
-              "poster": "posters/inner-wisdom/loop-16-speaker-stack-monster.jpg"
             }
           }
         },
