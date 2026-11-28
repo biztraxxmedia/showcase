@@ -140,6 +140,86 @@
           }
         },
         {
+          "id": "noyzez",
+          "title": "Noyzez",
+          "description": "A comic-book wizard and astronaut around the Inner Wisdom logo.",
+          "duration": 147,
+          "featured": true,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/noyzez.mp4",
+              "poster": "posters/inner-wisdom/noyzez.jpg"
+            }
+          }
+        },
+        {
+          "id": "noyzez-variation",
+          "title": "Noyzez",
+          "description": "An alternate look of Noyzez.",
+          "duration": 147,
+          "featured": true,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/noyzez-variation.mp4",
+              "poster": "posters/inner-wisdom/noyzez-variation.jpg"
+            }
+          },
+          "variation": true
+        },
+        {
+          "id": "worm-h0le-wav",
+          "title": "worm h0le wav",
+          "description": "Mirrored wizards and astronauts around the Inner Wisdom logo.",
+          "duration": 262,
+          "featured": true,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/worm-h0le-wav.mp4",
+              "poster": "posters/inner-wisdom/worm-h0le-wav.jpg"
+            }
+          }
+        },
+        {
+          "id": "worm-h0le-wav-variation",
+          "title": "worm h0le wav",
+          "description": "An alternate look of worm h0le wav.",
+          "duration": 262,
+          "featured": true,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/worm-h0le-wav-variation.mp4",
+              "poster": "posters/inner-wisdom/worm-h0le-wav-variation.jpg"
+            }
+          },
+          "variation": true
+        },
+        {
+          "id": "inner-space",
+          "title": "INNER SPACE",
+          "description": "A flying wizard and astronaut around the Inner Wisdom logo.",
+          "duration": 146,
+          "featured": true,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/inner-space.mp4",
+              "poster": "posters/inner-wisdom/inner-space.jpg"
+            }
+          }
+        },
+        {
+          "id": "the-machine",
+          "title": "The Machine",
+          "description": "A close-up face with the Inner Wisdom logo, beside a pulsing orb.",
+          "duration": 185,
+          "featured": true,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/the-machine.mp4",
+              "poster": "posters/inner-wisdom/the-machine.jpg"
+            }
+          }
+        },
+        {
           "id": "teaser",
           "title": "Teaser",
           "description": "A short teaser cut of the Inner Wisdom loop pack.",

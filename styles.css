@@ -235,6 +235,31 @@ body.iw .video-card.featured h2,
 body.iw .video-card.featured .desc,
 body.iw .video-card.featured .meta { display: none; }
 
+/* IW: variation cards show title + a Variation tag so they aren't read as a second track */
+body.iw .video-card.featured.variation {
+  padding: 0.7rem 0.45rem 0.45rem;
+}
+body.iw .video-card.featured.variation h2 {
+  display: block;
+  font-size: clamp(1.05rem, 3vw, 1.35rem);
+  margin: 0 0 0.3rem;
+  text-align: center;
+}
+body.iw .variation-tag {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 0.55rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lime);
+  border: 1px solid var(--lime);
+  border-radius: 999px;
+  padding: 0.18rem 0.65rem;
+  line-height: 1.2;
+}
+
 /* IW: hide every video description; featured stay wordless */
 body.iw .video-card .desc { display: none; }
 

@@ -15,6 +15,7 @@
     const card = document.createElement("article");
     card.className = "video-card";
     card.id = v.id;
+    if (v.variation) card.classList.add("variation");
 
     const h2 = document.createElement("h2");
     h2.textContent = v.title;
@@ -72,7 +73,14 @@
     wideBtn.addEventListener("click", function () { setFormat("widescreen"); });
     vertBtn.addEventListener("click", function () { setFormat("vertical"); });
 
-    card.append(h2, desc, meta, player);
+    if (v.variation) {
+      const tag = document.createElement("p");
+      tag.className = "variation-tag";
+      tag.textContent = "Variation";
+      card.append(h2, tag, desc, meta, player);
+    } else {
+      card.append(h2, desc, meta, player);
+    }
     setFormat(v.formats[fmt0] ? fmt0 : Object.keys(v.formats)[0]);
     return card;
   }
