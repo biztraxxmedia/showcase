@@ -1,6 +1,9 @@
 (function () {
   const base = document.body.dataset.base || "./";
   const only = document.body.dataset.client || "";
+  // iOS Safari only keeps a handful of video decoders alive at once.
+  // This page can have ~25 <video> tags, so attach src only for nearby cards.
+  const MAX_ATTACHED = 3;
 
   function asset(path) {
     return base + path.replace(/^\//, "");
@@ -8,6 +11,64 @@
 
   function preferredFormat() {
     return window.matchMedia("(max-width: 700px)").matches ? "vertical" : "widescreen";
+  }
+
+  const attached = [];
+
+  function release(video) {
+    if (!video || !video.getAttribute("data-attached")) return;
+    try { video.pause(); } catch (e) {}
+    const t = video.currentTime || 0;
+    if (t > 0.1) video.setAttribute("data-time", String(t));
+    // Do not set video.src = "" — that resolves to the page URL.
+    // removeAttribute + load() is what actually releases the iOS decoder.
+    video.removeAttribute("src");
+    video.preload = "none";
+    video.removeAttribute("data-attached");
+    try { video.load(); } catch (e) {}
+    const i = attached.indexOf(video);
+    if (i >= 0) attached.splice(i, 1);
+  }
+
+  function evictFor(keep) {
+    for (let i = attached.length - 1; i >= 0; i--) {
+      if (!attached[i] || !attached[i].isConnected) attached.splice(i, 1);
+    }
+    while (attached.length >= MAX_ATTACHED) {
+      let victim = null;
+      for (let i = 0; i < attached.length; i++) {
+        const v = attached[i];
+        if (v === keep) continue;
+        if (!v.paused && !v.ended) continue;
+        victim = v;
+        break;
+      }
+      if (!victim) {
+        for (let i = 0; i < attached.length; i++) {
+          if (attached[i] !== keep) { victim = attached[i]; break; }
+        }
+      }
+      if (!victim) break;
+      release(victim);
+    }
+  }
+
+  function attach(video, src) {
+    if (!video || !src) return;
+    if (video.getAttribute("data-attached") === src) return;
+    evictFor(video);
+    video.preload = "auto";
+    video.src = src;
+    video.setAttribute("data-attached", src);
+    const t = parseFloat(video.getAttribute("data-time") || "0");
+    if (t > 0.1) {
+      const onMeta = function () {
+        video.removeEventListener("loadedmetadata", onMeta);
+        try { video.currentTime = t; } catch (e) {}
+      };
+      video.addEventListener("loadedmetadata", onMeta);
+    }
+    if (attached.indexOf(video) < 0) attached.push(video);
   }
 
   function renderVideo(v) {
@@ -50,22 +111,47 @@
     video.controls = true;
     video.playsInline = true;
     video.setAttribute("playsinline", "");
-    video.preload = "metadata";
+    video.setAttribute("webkit-playsinline", "");
+    video.preload = "none";
     player.append(video);
+
+    let currentSrc = "";
+    let nearView = false;
 
     function setFormat(fmt) {
       const f = v.formats[fmt] || v.formats.widescreen || v.formats.vertical;
-      const playing = !video.paused && !video.ended;
+      const playing = !video.paused && !video.ended && !!video.getAttribute("data-attached");
       const t = video.currentTime || 0;
+      if (t > 0.1) video.setAttribute("data-time", String(t));
+      currentSrc = asset(f.src);
       video.poster = asset(f.poster);
-      video.src = asset(f.src);
-      if (t > 0.1) video.currentTime = t;
-      if (playing) video.play().catch(function () {});
       player.classList.toggle("widescreen", fmt === "widescreen");
       player.classList.toggle("vertical", fmt === "vertical");
       wideBtn.setAttribute("aria-pressed", fmt === "widescreen" ? "true" : "false");
       vertBtn.setAttribute("aria-pressed", fmt === "vertical" ? "true" : "false");
+      if (nearView || playing) {
+        attach(video, currentSrc);
+        if (playing) video.play().catch(function () {});
+      }
     }
+
+    function ensureReadyAndPlay() {
+      attach(video, currentSrc);
+      const playAttempt = video.play();
+      if (playAttempt && playAttempt.catch) playAttempt.catch(function () {});
+    }
+
+    // Attach in the same gesture as a tap so iOS will allow playback.
+    function onActivate() {
+      attach(video, currentSrc);
+    }
+    player.addEventListener("pointerdown", onActivate, true);
+    player.addEventListener("touchstart", onActivate, { capture: true, passive: true });
+    video.addEventListener("click", function () {
+      if (video.getAttribute("data-attached") !== currentSrc) {
+        ensureReadyAndPlay();
+      }
+    });
 
     wideBtn.disabled = !v.formats.widescreen;
     vertBtn.disabled = !v.formats.vertical;
@@ -82,6 +168,24 @@
       card.append(h2, desc, meta, player);
     }
     setFormat(v.formats[fmt0] ? fmt0 : Object.keys(v.formats)[0]);
+
+    if (window.IntersectionObserver) {
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          nearView = entry.isIntersecting;
+          if (entry.isIntersecting) {
+            attach(video, currentSrc);
+          } else if (video.paused || video.ended) {
+            release(video);
+          }
+        });
+      }, { root: null, rootMargin: "300px 0px", threshold: 0.01 });
+      io.observe(card);
+    } else {
+      nearView = true;
+      attach(video, currentSrc);
+    }
+
     return card;
   }
 
