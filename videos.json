@@ -114,6 +114,19 @@
       "theme": "iw",
       "videos": [
         {
+          "id": "basshemian-rhapsody",
+          "title": "Basshemian Rhapsody",
+          "description": "A Bohemian Rhapsody bootleg, with the Inner Wisdom logo at the center.",
+          "duration": 143,
+          "featured": true,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/basshemian-rhapsody.mp4",
+              "poster": "posters/inner-wisdom/basshemian-rhapsody.jpg"
+            }
+          }
+        },
+        {
           "id": "teaser",
           "title": "Teaser",
           "description": "A short teaser cut of the Inner Wisdom loop pack.",
