@@ -127,6 +127,19 @@
           }
         },
         {
+          "id": "chappell-roan-dub",
+          "title": "Chappell Roan Dub",
+          "description": "A Chappell Roan dub, with the Inner Wisdom logo at the center.",
+          "duration": 178,
+          "featured": true,
+          "formats": {
+            "widescreen": {
+              "src": "videos/inner-wisdom/chappell-roan-dub.mp4",
+              "poster": "posters/inner-wisdom/chappell-roan-dub.jpg"
+            }
+          }
+        },
+        {
           "id": "teaser",
           "title": "Teaser",
           "description": "A short teaser cut of the Inner Wisdom loop pack.",
